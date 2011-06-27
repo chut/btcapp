@@ -5,7 +5,10 @@
 <br>
 <% bit = Parsed.last %>
 <h2>Miner Name:  <%= bit.worker_name %></h2>
-<h3>Miner Info:</h3>
+<table hspace="10">
+<tr><td><h3>Miner Info:</h3></td><td><h3>Reward Info:</h3></td><td><h3>Pool Info:</h3></td></tr>
+<tr valign=top>
+<td>
 <table border="2" cellpadding="2" cellspacing="0">
 <tr><td>Hash rate:</td><td><%= bit.hash_rate %></td></tr>
 <tr><td>Round shares(stales):</td><td><%= bit.round_shares %>(<%= bit.round_stales %>)</td></tr>
@@ -13,7 +16,8 @@
 <tr><td>Total shares:</td><td><%= bit.total_shares %></td></tr>
 <tr><td>Last share:</td><td><%= bit.last_share %></td></tr>
 </table>
-<h3>Reward Info:</h3>
+</td>
+<td>
 <% totalreward = bit.estimated_rewards + bit.unconfirmed_rewards + bit.confirmed_rewards %>
 <table border="2" cellpadding="2" cellspacing="0">
 <tr><td>Estimated:</td><td><%= bit.estimated_rewards %></td></tr>
@@ -21,8 +25,11 @@
 <tr><td>Confirmed:</td><td><%= bit.confirmed_rewards %></td></tr>
 <tr><td bgcolor="green">Total:</td><td bgcolor="green"><%= totalreward %></td></tr>
 </table>
-<h3>Pool Info:</h3>
+</td>
+<td>
 <table border="2" cellpadding="2" cellspacing="0">
 <tr><td>Time on block:</td><td><%= bit.round_time %></td></tr>
 <tr><td>Hash rate:</td><td><%= bit.pool_hash_rate %></td></tr>
 </table>
+</td>
+</tr>
