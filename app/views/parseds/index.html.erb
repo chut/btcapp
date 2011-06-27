@@ -1,0 +1,51 @@
+<h1>Listing parseds</h1>
+
+<table>
+  <tr>
+    <th>Confirmed rewards</th>
+    <th>Estimated rewards</th>
+    <th>Payouts</th>
+    <th>Unconfirmed rewards</th>
+    <th>Worker num</th>
+    <th>Worker name</th>
+    <th>Hash rate</th>
+    <th>Round shares</th>
+    <th>Round stales</th>
+    <th>Reset shares</th>
+    <th>Reset stales</th>
+    <th>Total shares</th>
+    <th>Last share</th>
+    <th>Pool hash rate</th>
+    <th>Round time</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @parseds.each do |parsed| %>
+  <tr>
+    <td><%= parsed.confirmed_rewards %></td>
+    <td><%= parsed.estimated_rewards %></td>
+    <td><%= parsed.payouts %></td>
+    <td><%= parsed.unconfirmed_rewards %></td>
+    <td><%= parsed.worker_num %></td>
+    <td><%= parsed.worker_name %></td>
+    <td><%= parsed.hash_rate %></td>
+    <td><%= parsed.round_shares %></td>
+    <td><%= parsed.round_stales %></td>
+    <td><%= parsed.reset_shares %></td>
+    <td><%= parsed.reset_stales %></td>
+    <td><%= parsed.total_shares %></td>
+    <td><%= parsed.last_share %></td>
+    <td><%= parsed.pool_hash_rate %></td>
+    <td><%= parsed.round_time %></td>
+    <td><%= link_to 'Show', parsed %></td>
+    <td><%= link_to 'Edit', edit_parsed_path(parsed) %></td>
+    <td><%= link_to 'Destroy', parsed, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Parsed', new_parsed_path %>

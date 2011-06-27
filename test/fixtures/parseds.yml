@@ -1,0 +1,35 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  confirmed_rewards: 
+  estimated_rewards: 
+  payouts: 
+  unconfirmed_rewards: 
+  worker_num: 
+  worker_name: 
+  hash_rate: 
+  round_shares: 
+  round_stales: 
+  reset_shares: 
+  reset_stales: 
+  total_shares: 
+  last_share: 
+  pool_hash_rate: 
+  round_time: 
+
+two:
+  confirmed_rewards: 
+  estimated_rewards: 
+  payouts: 
+  unconfirmed_rewards: 
+  worker_num: 
+  worker_name: 
+  hash_rate: 
+  round_shares: 
+  round_stales: 
+  reset_shares: 
+  reset_stales: 
+  total_shares: 
+  last_share: 
+  pool_hash_rate: 
+  round_time: 

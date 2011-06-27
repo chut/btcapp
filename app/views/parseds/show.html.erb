@@ -1,0 +1,80 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Confirmed rewards:</b>
+  <%= @parsed.confirmed_rewards %>
+</p>
+
+<p>
+  <b>Estimated rewards:</b>
+  <%= @parsed.estimated_rewards %>
+</p>
+
+<p>
+  <b>Payouts:</b>
+  <%= @parsed.payouts %>
+</p>
+
+<p>
+  <b>Unconfirmed rewards:</b>
+  <%= @parsed.unconfirmed_rewards %>
+</p>
+
+<p>
+  <b>Worker num:</b>
+  <%= @parsed.worker_num %>
+</p>
+
+<p>
+  <b>Worker name:</b>
+  <%= @parsed.worker_name %>
+</p>
+
+<p>
+  <b>Hash rate:</b>
+  <%= @parsed.hash_rate %>
+</p>
+
+<p>
+  <b>Round shares:</b>
+  <%= @parsed.round_shares %>
+</p>
+
+<p>
+  <b>Round stales:</b>
+  <%= @parsed.round_stales %>
+</p>
+
+<p>
+  <b>Reset shares:</b>
+  <%= @parsed.reset_shares %>
+</p>
+
+<p>
+  <b>Reset stales:</b>
+  <%= @parsed.reset_stales %>
+</p>
+
+<p>
+  <b>Total shares:</b>
+  <%= @parsed.total_shares %>
+</p>
+
+<p>
+  <b>Last share:</b>
+  <%= @parsed.last_share %>
+</p>
+
+<p>
+  <b>Pool hash rate:</b>
+  <%= @parsed.pool_hash_rate %>
+</p>
+
+<p>
+  <b>Round time:</b>
+  <%= @parsed.round_time %>
+</p>
+
+
+<%= link_to 'Edit', edit_parsed_path(@parsed) %> |
+<%= link_to 'Back', parseds_path %>

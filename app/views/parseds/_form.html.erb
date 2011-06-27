@@ -1,0 +1,77 @@
+<%= form_for(@parsed) do |f| %>
+  <% if @parsed.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@parsed.errors.count, "error") %> prohibited this parsed from being saved:</h2>
+
+      <ul>
+      <% @parsed.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :confirmed_rewards %><br />
+    <%= f.text_field :confirmed_rewards %>
+  </div>
+  <div class="field">
+    <%= f.label :estimated_rewards %><br />
+    <%= f.text_field :estimated_rewards %>
+  </div>
+  <div class="field">
+    <%= f.label :payouts %><br />
+    <%= f.text_field :payouts %>
+  </div>
+  <div class="field">
+    <%= f.label :unconfirmed_rewards %><br />
+    <%= f.text_field :unconfirmed_rewards %>
+  </div>
+  <div class="field">
+    <%= f.label :worker_num %><br />
+    <%= f.text_field :worker_num %>
+  </div>
+  <div class="field">
+    <%= f.label :worker_name %><br />
+    <%= f.text_field :worker_name %>
+  </div>
+  <div class="field">
+    <%= f.label :hash_rate %><br />
+    <%= f.text_field :hash_rate %>
+  </div>
+  <div class="field">
+    <%= f.label :round_shares %><br />
+    <%= f.text_field :round_shares %>
+  </div>
+  <div class="field">
+    <%= f.label :round_stales %><br />
+    <%= f.text_field :round_stales %>
+  </div>
+  <div class="field">
+    <%= f.label :reset_shares %><br />
+    <%= f.text_field :reset_shares %>
+  </div>
+  <div class="field">
+    <%= f.label :reset_stales %><br />
+    <%= f.text_field :reset_stales %>
+  </div>
+  <div class="field">
+    <%= f.label :total_shares %><br />
+    <%= f.text_field :total_shares %>
+  </div>
+  <div class="field">
+    <%= f.label :last_share %><br />
+    <%= f.text_field :last_share %>
+  </div>
+  <div class="field">
+    <%= f.label :pool_hash_rate %><br />
+    <%= f.text_field :pool_hash_rate %>
+  </div>
+  <div class="field">
+    <%= f.label :round_time %><br />
+    <%= f.text_field :round_time %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
